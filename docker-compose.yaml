@@ -1,0 +1,14 @@
+version: '3'
+services:
+    mymusic-vue:
+        build:
+            context: ./app
+            dockerfile: ./Dockerfile
+        ports:
+            - "9060:80"
+        restart: unless-stopped
+
+# networks:
+#     default:
+#         external:
+#             name: macminimanualnetwork1
